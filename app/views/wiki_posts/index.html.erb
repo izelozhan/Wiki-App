@@ -1,16 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Wiki posts" %>
+<h1>Wiki Posts</h1>
 
-<h1>Wiki posts</h1>
-
-<div id="wiki_posts">
-  <% @wiki_posts.each do |wiki_post| %>
-    <%= render wiki_post %>
-    <p>
-      <%= link_to "Show this wiki post", wiki_post %>
-    </p>
-  <% end %>
+<div id="wiki-posts">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Created At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @wiki_posts.each do |post| %>
+        <tr>
+          <td><%= link_to post.title, wiki_post_path(post) %></td>
+          <td><%= post.created_at.strftime('%B %d, %Y') %></td>
+          <td><%= post.updated_at.strftime('%B %d, %Y') %></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
 </div>
 
-<%= link_to "New wiki post", new_wiki_post_path %>
+<%= link_to "New Wiki Post", new_wiki_post_path %>

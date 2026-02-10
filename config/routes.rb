@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
-  get 'wiki_posts/example'
 
   resources :wiki_posts
+  namespace :wiki_posts do 
+    get 'example'
+  end
+  namespace :welcome do
+    get 'index'
+    get 'about'
+  end 
+  
+
+  get 'wiki_posts/example'
   get "welcome/index"
   get "welcome/about"
   get '/about', to: redirect('/welcome/about')

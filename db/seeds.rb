@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+WikiPost.create!(title: 'Funny Fogs')
+WikiPost.create!(title: 'Monkey Facts')
+WikiPost.create!(title: 'Space Exploration')
+WikiPost.create!(title: 'Cooking Tips')
+
+
