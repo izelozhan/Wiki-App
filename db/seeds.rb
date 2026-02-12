@@ -8,9 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-WikiPost.create!(title: 'Funny Fogs')
-WikiPost.create!(title: 'Monkey Facts')
-WikiPost.create!(title: 'Space Exploration')
-WikiPost.create!(title: 'Cooking Tips')
-
-
+WikiPost.create!(title: 'Funny Fogs', description: 'Silly frogs from around the globe.', author: 'Billy Bill')
+WikiPost.create!(title: 'Monkey Facts', description: 'Everything you did and did not want to know about monkeys', author: 'John Doe')
+WikiPost.create!(title: 'Space Exploration', description: 'Dream about aliens, but do they dream about you?', author: 'Phil Philly')
+WikiPost.create!(title: 'Cooking Tips', description: 'Cooking... in progress...', author: 'Conlon Nancarrow')

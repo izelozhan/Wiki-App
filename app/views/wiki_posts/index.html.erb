@@ -8,7 +8,8 @@
       <tr>
         <th>Title</th>
         <th>Created At</th>
-        <th>Actions</th>
+        <th>Updated At</th>
+        <th>Author</th>
       </tr>
     </thead>
     <tbody>
@@ -17,6 +18,7 @@
           <td><%= link_to post.title, wiki_post_path(post) %></td>
           <td><%= post.created_at.strftime('%B %d, %Y') %></td>
           <td><%= post.updated_at.strftime('%B %d, %Y') %></td>
+          <td><%= post.author %></td>
         </tr>
       <%end%>
     </tbody>

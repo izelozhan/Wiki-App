@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @wiki_post %>
-<%= @wiki_post.title %>
 
-<p>Created on: <%= @wiki_post.created_at.strftime("%B %d, %Y") %></p> 
-
+<h1><%= @wiki_post.title.titleize %></h1>
+<p><%= @wiki_post.description%></p>
+<p>Author: <%= @wiki_post.author.titleize%></p>
+<p>Created on: <%= @wiki_post.created_at.strftime("%B %d, %Y") %></p>
 
 <div>
   <%= link_to "Edit this wiki post", edit_wiki_post_path(@wiki_post) %> |
   <%= link_to "Back to wiki posts", wiki_posts_path %>
-
   <%= button_to "Destroy this wiki post", @wiki_post, method: :delete %>
 </div>

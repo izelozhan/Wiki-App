@@ -10,9 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_06_214536) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_10_234929) do
   create_table "wiki_posts", force: :cascade do |t|
+    t.string "author"
     t.datetime "created_at", null: false
+    t.string "description"
     t.string "title"
     t.datetime "updated_at", null: false
   end

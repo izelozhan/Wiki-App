@@ -64,3 +64,4 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+gem "rubocop", require: false # or gem "syntax_tree", require: false

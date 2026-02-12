@@ -1,1 +1,7 @@
 <h1>Wiki Information</h1>
+<h2>Site Contributors: </h2>
+<ul>
+  <% @wiki_posts.contributors.compact.each do |contributor| %>
+    <li> <%= contributor.titleize %></li>
+  <% end%>
+</ul>
